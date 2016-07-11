@@ -22,10 +22,10 @@
 		<main class="container-fluid">
 		<section class="pokedex-entry">
 			<header class="row vertical-align">
-				<div class="col-xs-4">
-					<img class="img-responsive pokemon-image" alt="bulbasaur" src="images/1.png">
+				<div class="pokemon-image col-xs-4">
+					<img class="img-responsive" alt="bulbasaur" src="images/1.png">
 				</div>
-				<div class="pokemon-info col-xs-8">
+				<div class="pokemon-name col-xs-8">
 					<div class="row vertical-align">
 						<div class="col-xs-8">
 							<h2>#001 Bulbasaur</h2>
@@ -35,17 +35,66 @@
 							<img src="icons/star.png">
 						</div>
 					</div>
-					<div class="row">
-						<div class="col-xs-12">
-							<h3>0.7m, 6.9 kg</h3>
-							<p>Lorem ipsum Ea dolor laborum laborum in esse minim tempor cillum in fugiat qui nisi Excepteur non quis sint sed mollit qui veniam cupidatat occaecat sed Excepteur in Excepteur incididunt cupidatat ex Excepteur.</p>
-						</div>
-						<div class="col-xs-12">
-							<span class="pokemon-type fire">fire</span>
-						</div>
-					</div>
 				</div>
 			</header>
+			<div class="row">
+				<div class="pokemon-info col-xs-8 col-xs-offset-4">
+					<h3>0.7m, 6.9 kg</h3>
+					<p>Lorem ipsum Ea dolor laborum laborum in esse minim tempor cillum in fugiat qui nisi Excepteur non quis sint sed mollit qui veniam cupidatat occaecat sed Excepteur in Excepteur incididunt cupidatat ex Excepteur.</p>
+					<div class="pokemon-types">
+						<span class="pokemon-type grass"></span>
+						<span class="pokemon-type poison"></span>
+						<span class="pokemon-type bug"></span>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="panel panel-default">
+					<!-- Default panel contents -->
+					<div class="panel-heading">General information</div>
+					<!-- Table -->
+					<div class="table-responsive">
+						<table class="table">
+							<tbody>
+								<tr>
+									<td>Hidden Abilities</td>
+									<td>Clorophyl</td>
+								</tr>
+								<tr>
+									<td>Location</td>
+									<td>Lumoise City</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="panel panel-default">
+					<!-- Default panel contents -->
+					<div class="panel-heading">Evolutions</div>
+					<!-- Table -->
+					<div class="table-responsive">
+						<table class="table evolution-table">
+							<tr>
+								<td class="col-xs-4">
+									<img class="img-thumbnail img-responsive" alt="bulbasaur" src="images/1.png">
+								</td>
+								<td class="pokemon-evolution col-xs-8">
+									<span class="pokemon-number">#001</span>
+									<h4>Bulbasaur</h4>
+									<p>LV. 0</p>
+									<div class="pokemon-types">
+										<span class="pokemon-type grass"></span>
+										<span class="pokemon-type poison"></span>
+										<span class="pokemon-type bug"></span>
+									</div>
+								</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</div>
 		</section>
 		</main>
 		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->

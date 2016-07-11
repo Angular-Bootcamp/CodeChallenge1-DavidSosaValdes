@@ -1,8 +1,11 @@
+.navbar {
+	margin-bottom: 0px;
+}
+
 .navbar-pokedex {
 	&:extend(.navbar-default all);
 	border-radius: 0px;
 	background-color: @pokedex-bg-color;
-
 	h1.navbar-text {
 		font-size: 22px;
 		text-align: center;
@@ -10,7 +13,6 @@
 		padding-right: 35px;
 		color: white;
 	}
-
 	.navbar-brand {
 		color: white;
 	}
@@ -21,36 +23,95 @@
 		.pokemon-image {
 			margin: auto 0px;
 		}
-		.pokemon-info {
+		.pokemon-name {
 			font-size: 13px;
 			h2 {
 				font-size: 20px;
 				color: @pokedex-bg-color;
 			}
-			h3 {
-				margin-top: 0px;
-				font-size: 15px;
-			}
 			.icons {
 				text-align: right;
+				margin-top: 10px;
 				img {
 					margin: auto 5px;
 				}
 			}
 		}
 	}
+	.pokemon-info {
+		font-size: 13px;
+		margin-top: -20px;
+		margin-bottom: 20px;
+		h3 {
+			margin-top: 0px;
+			font-size: 15px;
+		}
+	}
+
+}
+
+.panel {
+	&:extend(.panel all);
+	border: none;
+	border-radius: 0px;
+	margin-bottom: 0px;
+	
+	.panel-heading {
+		border: none;
+		border-top-right-radius: 0px;
+		border-top-left-radius: 0px;
+		padding-left: 8px;
+	}	
+}
+
+.panel-pokedex {
+	&:extend(.panel-default all);
 }
 
 .pokemon-type {
-	&:extend(.badge all);
-	border-radius: 3px;
-	&.fire {
-		background-color: #b92c28;
-		border-color: #b92c28;
+	&:extend(.label all);
+	&:empty {
+		display: initial;
+	}
+	&.grass {
+		&:before {
+			content: "Grass";
+		}
+		background-color: #97D077;
+		border-color: #97D077;
+	}
+	&.poison {
+		&:before {
+			content: "Poison";
+		}
+		background-color: #A680B8;
+		border-color: #A680B8;
+
+	}
+	&.bug {
+		&:before {
+			content: "Bug";
+		}
+		background-color: #67AB9F;
+		border-color: #67AB9F;		
 	}
 }
 
 .vertical-align {
     display: flex;
     align-items: center;
+}
+
+.evolution-table {
+	.pokemon-evolution {
+		h4 {
+			margin-bottom: 0px;
+		}
+		p {
+			margin: 2px;
+		}
+		span.pokemon-number {
+			float: right;
+		}
+	}
 }
