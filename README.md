@@ -9,10 +9,10 @@ First off, let's install all the dependencies:
 	npm install
 	bower install
 
-Next install all the assets with the command:
-	
+Next move all the assets to their directories with the `npm` command:
+
 	bower-installer
 
-Compile LESS with the command:
+Finally compile the main stylesheet using LESS with the command:
 
 	lessc src/less/styles.less > public/css/styles.css
