@@ -1,0 +1,37 @@
+.navbar-pokedex {
+	&:extend(.navbar-default all);
+	border-radius: 0px;
+	color: white;
+	background-color: @pokedex-bg-color;
+
+	.navbar-brand {
+		color: white;
+	}
+
+	.navbar-collapse {
+		ul.nav > li > a {
+			color: white;
+		}
+	}
+}
+
+.pokedex-entry {
+	header {
+		.pokemon-image {
+			margin: auto 0px;
+		}
+		.pokemon-name {
+			font-size: 15px;
+			.icons {
+				text-align: right;
+				img {
+					margin: auto 5px;
+				}
+			}
+		}
+		.pokemon-info {
+			color: gray;
+			font-size: 13px;
+		}
+	}
+}
