@@ -1,0 +1,9 @@
+{
+  "author": "David Sosa Valdes",
+  "name": "codechallange1-davidsosavaldes",
+  "version": "1.0.0",
+  "description": "Angular Bootcamp - Code Challange #1",
+  "dependencies": {
+    "less": "^2.7.1"
+  }
+}

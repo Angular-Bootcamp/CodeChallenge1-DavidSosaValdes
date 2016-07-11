@@ -1,0 +1,24 @@
+{
+  "name": "CodeChallenge1-DavidSosaValdes",
+  "authors": [
+    "David Sosa Valdes <david.sosa.valdes@gmail.com>"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.6"
+  },
+  "install": {
+    "path" : {
+      "js": "public/js/{name}",
+      "less": "src/less/{name}"
+    },
+    "sources": {
+      "bootstrap": [
+        "bower_components/bootstrap/less/**",
+        "bower_components/bootstrap/dist/js/bootstrap.min.js"
+      ],
+      "jquery": [
+        "bower_components/jquery/dist/jquery.min.js"
+      ]
+    }
+  }
+}
