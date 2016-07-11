@@ -1,17 +1,18 @@
 .navbar-pokedex {
 	&:extend(.navbar-default all);
 	border-radius: 0px;
-	color: white;
 	background-color: @pokedex-bg-color;
 
-	.navbar-brand {
+	h1.navbar-text {
+		font-size: 22px;
+		text-align: center;
+		margin: 12px 0px;
+		padding-right: 35px;
 		color: white;
 	}
 
-	.navbar-collapse {
-		ul.nav > li > a {
-			color: white;
-		}
+	.navbar-brand {
+		color: white;
 	}
 }
 
@@ -20,8 +21,16 @@
 		.pokemon-image {
 			margin: auto 0px;
 		}
-		.pokemon-name {
-			font-size: 15px;
+		.pokemon-info {
+			font-size: 13px;
+			h2 {
+				font-size: 20px;
+				color: @pokedex-bg-color;
+			}
+			h3 {
+				margin-top: 0px;
+				font-size: 15px;
+			}
 			.icons {
 				text-align: right;
 				img {
@@ -29,9 +38,19 @@
 				}
 			}
 		}
-		.pokemon-info {
-			color: gray;
-			font-size: 13px;
-		}
 	}
+}
+
+.pokemon-type {
+	&:extend(.badge all);
+	border-radius: 3px;
+	&.fire {
+		background-color: #b92c28;
+		border-color: #b92c28;
+	}
+}
+
+.vertical-align {
+    display: flex;
+    align-items: center;
 }
