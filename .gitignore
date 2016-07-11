@@ -2,3 +2,7 @@
 /bower_components/
 /node_modules/
 /src/less/bootstrap/
+/src/less/font-awesome/
+/public/js/*
+/public/css/*
+/public/fonts/*
