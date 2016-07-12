@@ -2,6 +2,22 @@
 
 This is the first challenge of Accenture-Bootcamp: Pokedex v0.0.1
 
+## Demo
+
+![Demo1](screenshots/demo-1.png)
+
+## Requirements
+
+- [X] Mobile first
+- [X] Use Less for CSS
+- [X] Use Bootstrap UI
+- [X] Follow the guidelines
+
+## Additional features:
+
+- [ ] apple-mobile-web-app-capable
+- [ ] android-mobile-web-app-capable
+
 ## Installation
 
 First off, let's install all the dependencies:
