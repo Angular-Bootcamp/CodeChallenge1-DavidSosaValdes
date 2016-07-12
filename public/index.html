@@ -8,7 +8,7 @@
 		<!-- CSS Libraries -->
 		<link href="css/styles.css" rel="stylesheet">
 	</head>
-	<body>
+	<body ng-app="pokedexApp">
 		<nav class="navbar navbar-pokedex">
 			<div class="container-fluid">
 				<div class="navbar-header">
@@ -19,16 +19,16 @@
 				</div>
 			</div>
 		</nav>
-		<main class="container-fluid">
+		<main class="container-fluid" ng-controller="pokedexEntryController">
 		<section class="pokedex-entry">
 			<header class="row vertical-align">
 				<div class="pokemon-image col-xs-4">
-					<img class="img-responsive" alt="bulbasaur" src="images/1.png">
+					<img class="img-responsive" alt="bulbasaur" data-ng-src="{{pokemon.image}}">
 				</div>
 				<div class="pokemon-name col-xs-8">
 					<div class="row vertical-align">
 						<div class="col-xs-8">
-							<h2>#001 Bulbasaur</h2>
+							<h2>#{{("000" + pokemon.id).slice(-3)}} {{pokemon.name | ucfirst}}</h2>
 						</div>
 						<div class="col-xs-4 icons">
 							<img src="icons/empty-plate.png">
@@ -39,12 +39,13 @@
 			</header>
 			<div class="row">
 				<div class="pokemon-info col-xs-8 col-xs-offset-4">
-					<h3>0.7m, 6.9 kg</h3>
-					<p>Lorem ipsum Ea dolor laborum laborum in esse minim tempor cillum in fugiat qui nisi Excepteur non quis sint sed mollit qui veniam cupidatat occaecat sed Excepteur in Excepteur incididunt cupidatat ex Excepteur.</p>
+					<ul class="list-inline">
+						<li><h3>{{pokemon.height/10}} m</h3></li>
+						<li><h3>{{pokemon.weight/10}} kg</h3></li>
+					</ul>
+					<p>{{pokemon.description}}</p>
 					<div class="pokemon-types">
-						<span class="pokemon-type grass"></span>
-						<span class="pokemon-type poison"></span>
-						<span class="pokemon-type bug"></span>
+						<span ng-repeat="type in pokemon.types" class="pokemon-type {{type.name}}"></span>
 					</div>
 				</div>
 			</div>
@@ -58,11 +59,20 @@
 							<tbody>
 								<tr>
 									<td>Hidden Abilities</td>
-									<td>Clorophyl</td>
+									<td>
+										<ul class="list-inline">
+											<li ng-repeat="ability in pokemon.abilities">{{ability.name}}</li>
+										</ul>
+									</td>
 								</tr>
 								<tr>
 									<td>Location</td>
-									<td>Lumoise City</td>
+									<td>
+										<span ng-if="!!pokemon.location_area_encounters">
+											Starter pokemon on <b>{{pokemon.region}} Region</b>
+										</span>
+										<!-- toDO: iterate over location_area_enconters if not empty-->
+									</td>
 								</tr>
 							</tbody>
 						</table>
@@ -71,23 +81,19 @@
 			</div>
 			<div class="row">
 				<div class="panel panel-default">
-					<!-- Default panel contents -->
 					<div class="panel-heading">Evolutions</div>
-					<!-- Table -->
 					<div class="table-responsive">
 						<table class="table evolution-table">
-							<tr>
+							<tr ng-repeat="evolution in pokemon.evolutions">
 								<td class="col-xs-4">
-									<img class="img-responsive" alt="bulbasaur" src="images/1.png">
+									<img class="img-responsive" alt="bulbasaur" data-ng-src="{{evolution.image}}">
 								</td>
 								<td class="pokemon-evolution col-xs-8">
-									<span class="pokemon-number">#001</span>
-									<h4>Bulbasaur</h4>
-									<p>LV. 0</p>
+									<span class="pokemon-number">#{{("000" + evolution.id).slice(-3)}}</span>
+									<h4>{{evolution.name | ucfirst}}</h4>
+									<p>LV. {{evolution.minLevel}}</p>
 									<div class="pokemon-types">
-										<span class="pokemon-type grass"></span>
-										<span class="pokemon-type poison"></span>
-										<span class="pokemon-type bug"></span>
+										<span ng-repeat="type in evolution.types" class="pokemon-type {{type.name}}"></span>
 									</div>
 								</td>
 							</tr>
@@ -101,5 +107,10 @@
 		<script src="js/jquery/jquery.min.js"></script>
 		<!-- Bootstrap Library -->
 		<script src="js/bootstrap/bootstrap.min.js"></script>
+		<!-- AngularJS Libraries -->
+		<script src="js/angular/angular.min.js"></script>
+		<script src="js/angular-filter/angular-filter.min.js"></script>
+		<!-- Application -->
+		<script src="js/app.js"></script>
 	</body>
 </html>
