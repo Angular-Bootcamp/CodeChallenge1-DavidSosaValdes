@@ -15,8 +15,6 @@ This is the first challenge of Accenture-Bootcamp: Pokedex v0.0.1
 
 ## Additional features:
 
-- [ ] apple-mobile-web-app-capable
-- [ ] android-mobile-web-app-capable
 - [X] AngularJS (Base with dummy data)
 
 ## Installation
